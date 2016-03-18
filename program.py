@@ -1,9 +1,11 @@
-#IP Country Lookup
-#
-from twill.commands import *
+#Title
+#   IP Country Lookup
+#Author(s)
+#   Ryan Samarajeewa
+#Description
+#   A web app / program that offers a quick way to map a given IP address to a country.
 
 def main():
-    go("http://www.ip2nation.com/ip2nation")
-    showforms()
+    print 'hello'
 
 main()
