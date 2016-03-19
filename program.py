@@ -7,15 +7,21 @@
 
 import sqlite3
 import urllib2
+import zipfile
 
 def main():
-    #Update the database by dowonloading latest content
-    #from ip2nation
+    print 'Please enter an IP:'
 
+#Updates the database by downloading latest content
+#from ip2nation
+def updateDB():
     #Download zip file
     url = "http://www.ip2nation.com/ip2nation.zip"
     dlfile(url)
 
+    #Extract zip file
+    file = zipfile.ZipFile("ip2nation.zip")
+    file.extractall()
     '''
     db_connection = sqlite3.connect('test.db')
     createTable(db_connection)
