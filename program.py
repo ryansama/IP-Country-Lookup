@@ -9,12 +9,34 @@ import sqlite3
 import urllib2
 
 def main():
-    response = urllib2.urlopen("http://www.ip2nation.com/ip2nation/Download")
+    #Update the database by dowonloading latest content
+    #from ip2nation
+
+    #Download zip file
+    url = "http://www.ip2nation.com/ip2nation.zip"
+    dlfile(url)
+
     '''
     db_connection = sqlite3.connect('test.db')
     createTable(db_connection)
     db_connection.close()
     '''
+
+def dlfile(url):
+    # Open the url
+    try:
+        f = urllib2.urlopen(url)
+        print "downloading " + url
+
+        # Open our local file for writing
+        with open(urllib2.os.path.basename(url), "wb") as local_file:
+            local_file.write(f.read())
+
+    #Handle errors
+    except urllib2.HTTPError, e:
+        print "HTTP Error:", e.code, url
+    except urllib2.URLError, e:
+        print "URL Error:", e.reason, url
 
 def createTable(conn):
     conn = sqlite3.connect('test.db')
