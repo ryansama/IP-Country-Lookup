@@ -5,9 +5,9 @@
 #Description
 #   A web app / program that offers a quick way to map a given IP address to a country.
 
-import sqlite3
-import urllib2
-import zipfile
+from program import urllib2
+from program import zipfile
+from program import sqlite3
 
 def main():
     print 'Please enter an IP:'
