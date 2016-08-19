@@ -1,3 +1,3 @@
-#IP Country Lookup
+#karan/Projects
 
-Commandline program that uses ip-api API to obtain the country of a given IP.
+My solutions for projects in [karan/Projects](https://github.com/karan/Projects). 
