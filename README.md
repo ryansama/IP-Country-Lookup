@@ -1,3 +1,3 @@
 #IP Country Lookup
 
-A web app / program that offers a quick way to map a given IP address to a country.
+Commandline program that uses ip-api API to obtain the country of a given IP.
