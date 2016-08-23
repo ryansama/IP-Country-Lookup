@@ -2,7 +2,7 @@ import urllib2
 import sys
 import lxml.html
 
-# returns string
+# returns html as string
 def get_page():
     if len(sys.argv) != 2:
         print "Usage: python page-scraper.py <url>"
@@ -16,5 +16,9 @@ def get_page():
             exit()
 
 dom =  lxml.html.fromstring(get_page())
-for link in dom.xpath('//a/@href'): # select the url in href for all a tags(links)
-    print link
+links = set(dom.xpath('//a/@href'))
+
+#add url to relative page links
+f = open('list-of-links.txt', 'w')
+for link in links:
+    f.write(link + '\n')    
