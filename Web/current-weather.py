@@ -5,3 +5,13 @@
 #usage: python current-weather.py <zip/postal code>
 
 import pyowm
+import re
+
+input_zip = ""
+def getInput():
+    if len(sys.argv) != 2:
+        print "Usage: python current-weather.py <zip/postal code>"
+        exit()
+    else:
+        global input_zip
+        input_zip = sys.argv[1]
