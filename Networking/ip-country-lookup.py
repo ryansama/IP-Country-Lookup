@@ -1,4 +1,4 @@
-# Commandline program that uses ip-api API to obtain the country of a given IP
+#Country from IP Lookup - Enter an IP address and find the country that IP is registered in. Optional: Find the Ip automatically.
 # Usage: python ip-country-lookup.py <country>
 # Outputs user's current country by default
 
